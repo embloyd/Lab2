@@ -23,19 +23,15 @@ public class Main
     {
         Scanner sc = new Scanner(System.in);
 
-        // задание 1: имена
         System.out.println("---Задание 1: Имена---");
         runNameTask(sc);
 
-        // задание 2: дом
         System.out.println("\n---Задание 2: Дом---");
         runHouseTask(sc);
 
-        // задание 3-4: сотрудники и отделы
         System.out.println("\n---Задание 3-4: Сотрудники и отделы---");
         runEmployeesTask(sc);
 
-        // задание 5: дроби
         System.out.println("\n---Задание 5: Дроби---");
         runFractionTask(sc);
 
@@ -120,7 +116,6 @@ public class Main
             employees[i].setDepartment(department);
         }
 
-        // выбор начальника отдела
         selectDepartmentHead(sc, employees, department);
 
         System.out.println("\nИнформация о сотрудниках:");
@@ -129,7 +124,6 @@ public class Main
             System.out.println(e);
         }
 
-        // поиск сотрудников отдела
         searchDepartmentEmployees(sc, department);
     }
 
@@ -230,15 +224,12 @@ public class Main
      */
     private static void runFractionTask(Scanner sc)
     {
-        // создание трех дробей
         Fraction f1 = createFraction(sc, "первой");
         Fraction f2 = createFraction(sc, "второй");
         Fraction f3 = createFraction(sc, "третьей");
 
-        // демонстрация операций
         demonstrateFractionOperations(f1, f2, f3);
 
-        // вычисление сложного выражения
         Fraction result = f1.add(f2)
                 .divide(f3)
                 .subtract(5);
@@ -278,13 +269,11 @@ public class Main
             Fraction f3
     )
     {
-        // операции между дробями
         System.out.println(f1 + " + " + f2 + " = " + f1.add(f2));
         System.out.println(f1 + " - " + f2 + " = " + f1.subtract(f2));
         System.out.println(f1 + " * " + f2 + " = " + f1.multiply(f2));
         System.out.println(f1 + " / " + f2 + " = " + f1.divide(f2));
 
-        // операции с целыми числами
         System.out.println(f1 + " + 5 = " + f1.add(5));
         System.out.println(f1 + " - 5 = " + f1.subtract(5));
         System.out.println(f1 + " * 5 = " + f1.multiply(5));

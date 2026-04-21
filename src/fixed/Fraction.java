@@ -29,7 +29,6 @@ public class Fraction
             );
         }
 
-        // нормализация знака
         if (denominator < 0)
         {
             numerator = -numerator;
